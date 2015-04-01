@@ -17,4 +17,9 @@ The app starts a server and listens on port 3000 for connection. It will respond
 Save the code in a file named app.js and run it with the following command.
 **node app.js**
 
+# Basic Routing Tutorial 
+- Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
+- Each route can have one or more handler functions, which is / are executed when the route is matched.
+- Route definition takes the following structure
+- **app.METHOD(PATH, HANDLER)**, where app is an instance of express, **METHOD** is an HTTP request method, **PATH** is a path on the server, and **HANDLER** is the function executed when the route is matched.
 
