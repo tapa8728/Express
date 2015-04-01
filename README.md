@@ -34,4 +34,9 @@ Save the code in a file named app.js and run it with the following command.
 - Route paths, in combination with a request method, define the endpoints at which requests can be made to. They can be strings, string patterns, or regular expressions.
 
 # Route Handlers
-
+- You can provide multiple callback functions that behave just like middleware to handle a request. The only exception is that these callbacks may invoke next('route') to bypass the remaining route callback(s).
+- You can use this mechanism to impose pre-conditions on a route, then pass control to subsequent routes if there’s no reason to proceed with the current route.
+- A route can be handled using a single callback function:
+- A route can be handled using a more than one callback function (make sure to specify the next object):
+- A route can be handled using an array of callback functions:
+- A route can be handled using a combination of array of functions and independent functions:
