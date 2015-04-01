@@ -31,5 +31,7 @@ Save the code in a file named app.js and run it with the following command.
 - **app.all()** which is not derived from any HTTP method. It is used for loading middleware at a path for all request methods.
 
 # Route Paths
-- 
+- Route paths, in combination with a request method, define the endpoints at which requests can be made to. They can be strings, string patterns, or regular expressions.
+
+# Route Handlers
 
