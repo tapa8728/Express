@@ -23,3 +23,8 @@ Save the code in a file named app.js and run it with the following command.
 - Route definition takes the following structure
 - **app.METHOD(PATH, HANDLER)**, where app is an instance of express, **METHOD** is an HTTP request method, **PATH** is a path on the server, and **HANDLER** is the function executed when the route is matched.
 
+# Routing
+- Routing refers to the definition of end points (URIs) to an application and how it responds to client requests.
+- A route is a combination of a URI, a HTTP request method (GET, POST, and so on), and one or more handlers for the endpoint. - A **route method** is derived from one of the HTTP methods, and is attached to an instance of express.
+
+
