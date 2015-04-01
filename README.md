@@ -12,5 +12,9 @@ http://expressjs.com/starter/hello-world.html
 
 **DEBUG=myapp ./bin/www** ... run the app
 
+The app starts a server and listens on port 3000 for connection. It will respond with “Hello World!” for requests to the homepage. For every other path, it will respond with a 404 Not Found.
+
+Save the code in a file named app.js and run it with the following command.
+**node app.js**
 
 
