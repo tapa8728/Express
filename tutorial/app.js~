@@ -88,13 +88,49 @@ app.get('/ab(cd)?e', function(req, res) {
 
 // ******* Matching Requests with REGULAR EXPRESSIONS *******
 // will match anything with an 'a' in the route name:
-app.get(/a/, function(req, res) {
+/*app.get(/a/, function(req, res) {
   res.send('/a/');
 });
 
 // will match butterfly, dragonfly; but not butterflyman, dragonfly man, and so on in the route name
 app.get(/.*fly$/, function(req, res) {
   res.send('/.*fly$/');
+});*/
+
+// ***** ROUTE HANDLERS, mulitple call back functions , make usre to specify the "next" object ******
+app.get('/example/b', function (req, res, next) {
+  console.log('response will be sent by the next function ...');
+  next();
+}, function (req, res) {
+  res.send('Hello from B!');
+});
+
+// ****** RESPONSE can be handled by an ARRAY of callback functions ******
+var func1 = function(req, res, next) {
+  console.log('this is in func1');
+  next();
+}
+
+var func2 = function(req, res, next) {
+  console.log('this is in func2');
+  next();
+}
+
+var func3 = function(req, res, next) {
+  console.log('this is in func3');
+  res.send('Finally you have reached');
+}
+
+app.get('/tanvi/rox/so', [ func1, func2, func3 ]);
+
+// ****** RESPONSE can be handled by COMBINATION of an ARRAY & callback functions ******
+var func4 = function(req, res, next) {
+  console.log('this is in func4');
+  next();
+}
+
+app.get('/what/do/you', func4, function(req,res){
+   res.send("woohoo you are here!");
 });
 
 
