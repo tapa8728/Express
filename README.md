@@ -26,5 +26,10 @@ Save the code in a file named app.js and run it with the following command.
 # Routing
 - Routing refers to the definition of end points (URIs) to an application and how it responds to client requests.
 - A route is a combination of a URI, a HTTP request method (GET, POST, and so on), and one or more handlers for the endpoint. - A **route method** is derived from one of the HTTP methods, and is attached to an instance of express.
+- Express supports the following routing methods corresponding to HTTP methods: **get, post, put, head, delete, options, trace, copy, lock, mkcol, move, purge, propfind, proppatch, unlock, report, mkactivity, checkout, merge, m-search, notify, subscribe, unsubscribe, patch, search, and connect.**
+- *To route methods which translate to invalid JavaScript variable names, use the bracket notation. For example, app['m-search']('/', function ...*
+- **app.all()** which is not derived from any HTTP method. It is used for loading middleware at a path for all request methods.
 
+# Route Paths
+- 
 
